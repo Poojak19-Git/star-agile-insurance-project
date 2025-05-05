@@ -1,7 +1,6 @@
 FROM openjdk:11
-ARG JAR_FILE=target/insurance-app.jar
-RUN echo "JAR_FILE is set to: ${JAR_FILE}"
-RUN ls -l
+ARG JAR_FILE=target/insurance-app-1.0.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
 
