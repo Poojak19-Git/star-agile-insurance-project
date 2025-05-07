@@ -1,6 +1,7 @@
 FROM openjdk:11
-ARG JAR_FILE=target/insurance-app-1.0.jar
+ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+EXPOSE 8081
+ENTRYPOINT ["java","-jar","/app.jar"]
 
 
